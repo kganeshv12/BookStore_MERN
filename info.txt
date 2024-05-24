@@ -1,0 +1,16 @@
+we use nodemon for restarting server automatically
+we use express as the web framework
+
+
+Some key features of Express.js include:
+
+Middleware: Express.js is built around the concept of middleware, which are functions that 
+have access to the request and response objects and can modify them or terminate the request
+-response cycle. Middleware functions can be used for tasks such as logging, authentication, 
+error handling, and more.
+
+Routing: Express provides a simple and intuitive API for defining routes based on HTTP methods 
+(GET, POST, PUT, DELETE, etc.) and URL patterns. Routes can be organized into modular routers 
+to keep the codebase clean and maintainable.
+
+app.get() helps get a resouce frmo server.
