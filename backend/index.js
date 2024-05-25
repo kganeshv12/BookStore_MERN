@@ -47,6 +47,8 @@ app.post('/books', async (req, res) => {
 
 })
 
+
+// route to get all the books
 app.get('/books', async (req, res) => {
     try{
         const book = await Book.find({});
@@ -91,11 +93,22 @@ app.get('/books/:id', async (req,res) => {
 
 // Updating a book
 
-app.put('/books/:id/:name', async (req,res) => {
+// app.put('/books/:id/:name', async (req,res) => {
+//     try{
+//         const {id} = req.params;
+//         const {name} = req.params;
+//         const book = await Book.findByIdAndUpdate(id, {name: name});
+//     }catch(error){
+//         console.log(error.message);
+//         res.status(500).send({message: error.message});
+//     }
+// })
+
+app.put('books/:id', async (req,res) => {
     try{
         const {id} = req.params;
-        const {name} = req.params;
-        const book = await Book.findByIdAndUpdate(id, {name: name});
+        const book = await Book.findByIdAndUpdate(id, req.body);
+        return res.status(200).json(book);
     }catch(error){
         console.log(error.message);
         res.status(500).send({message: error.message});
