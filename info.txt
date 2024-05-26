@@ -14,3 +14,32 @@ Routing: Express provides a simple and intuitive API for defining routes based o
 to keep the codebase clean and maintainable.
 
 app.get() helps get a resouce frmo server.
+
+
+By using 
+app.use('/books', bookRoutes)
+, the application is essentially "mounting" the 
+bookRoutes
+ middleware at the 
+/books
+ endpoint. This means that any requests to URLs starting with 
+/books
+ will be handled by the 
+bookRoutes
+ middleware.
+
+This is a common pattern in Express.js applications, 
+as it helps to organize the codebase 
+and keep the routing logic separate from the main application logic.
+
+
+CORS POLICY :
+
+cross origin resource sharing
+
+it is a security mechanism in the browser that restricts the ability of the web page
+to make requests to a different domain.
+
+it is a web security mechanism that prevents unauthorized cross-origin access to a resource or a cell.
+
+
